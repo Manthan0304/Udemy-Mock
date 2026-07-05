@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: -apple-system, 'Segoe UI', Roboto, sans-serif;
+    color: #1C1D1F;
+    background: #FFFFFF;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-udemy-purple text-white font-bold py-3 px-6 rounded-md hover:bg-udemy-purple-hover transition-colors duration-200 cursor-pointer;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-udemy-purple border-2 border-udemy-purple font-bold py-3 px-6 rounded-md hover:bg-udemy-purple-light transition-colors duration-200 cursor-pointer;
+  }
+
+  .btn-destructive {
+    @apply bg-udemy-destructive text-white font-bold py-3 px-6 rounded-md hover:opacity-90 transition-opacity duration-200 cursor-pointer;
+  }
+
+  .form-input {
+    @apply w-full border border-udemy-border rounded px-4 py-3 text-udemy-dark placeholder-udemy-muted focus:outline-none focus:border-udemy-dark focus:ring-1 focus:ring-udemy-dark text-sm;
+  }
+
+  .card-surface {
+    @apply bg-white border border-udemy-border rounded-lg shadow-sm;
+  }
+
+  .dpdp-surface {
+    @apply bg-udemy-purple-light border border-purple-200 rounded-lg;
+  }
+
+  .nav-link {
+    @apply text-udemy-dark text-sm font-medium hover:text-udemy-purple transition-colors duration-150 cursor-pointer;
+  }
+
+  .sidebar-item {
+    @apply flex items-center gap-3 px-4 py-3 text-sm font-medium text-udemy-dark rounded cursor-pointer hover:bg-udemy-card transition-colors duration-150;
+  }
+
+  .sidebar-item-active {
+    @apply flex items-center gap-3 px-4 py-3 text-sm font-bold text-udemy-purple bg-udemy-purple-light rounded cursor-pointer border-l-4 border-udemy-purple;
+  }
+}
